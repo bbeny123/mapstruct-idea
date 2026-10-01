@@ -8,10 +8,10 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - { jdk: 21, idea: 2025.1 }
-          - { jdk: 21, idea: 2025.2 }
-          - { jdk: 21, idea: 2025.3 }
-          - { jdk: 21, idea: 2026.1 }
+          - { jdk: 25, idea: 2025.1 }
+          - { jdk: 25, idea: 2025.2 }
+          - { jdk: 25, idea: 2025.3 }
+          - { jdk: 25, idea: 2026.1 }
           - { jdk: 25, idea: LATEST-EAP-SNAPSHOT }
     name: 'IDEA ${{ matrix.version.idea }}'
     env:
