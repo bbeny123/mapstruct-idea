@@ -24,6 +24,10 @@ java {
     targetCompatibility = JavaLanguageVersion.of(21)
 }
 
+tasks.withType(JavaCompile).configureEach {
+    javaCompiler = javaToolchains.compilerFor {}
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
