@@ -34,7 +34,6 @@ import com.intellij.psi.PsiLiteralExpression;
 import com.intellij.psi.PsiMethod;
 import com.intellij.psi.PsiNameValuePair;
 import com.intellij.psi.PsiParameter;
-import com.intellij.psi.PsiRecordComponent;
 import com.intellij.psi.PsiReference;
 import com.intellij.psi.PsiType;
 import com.intellij.psi.PsiTypeParameter;
@@ -190,9 +189,6 @@ public class JavaExpressionInjector implements MultiHostInjector {
                             }
                             else if ( resolved instanceof PsiField resolvedPsiField ) {
                                 targetType = resolvedPsiField.getType();
-                            }
-                            else if ( resolved instanceof PsiRecordComponent resolvedRecordComponent ) {
-                                targetType = resolvedRecordComponent.getType();
                             }
                         }
                     }
